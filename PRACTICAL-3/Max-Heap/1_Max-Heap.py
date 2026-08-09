@@ -14,7 +14,7 @@ def max_heapify(arr, n, i):
         max_heapify(arr, n, largest)
 
 
-def build_max_heap(arr):
+def max_heap(arr):
     n = len(arr)
 
     for i in range(n // 2 - 1, -1, -1):
@@ -23,6 +23,6 @@ def build_max_heap(arr):
 
 arr = [12, 11, 13, 21, 27, 10]
 
-build_max_heap(arr)
+max_heap(arr)
 
 print("Max Heap:", arr)
