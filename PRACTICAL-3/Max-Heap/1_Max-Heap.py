@@ -5,10 +5,8 @@ def max_heapify(arr, n, i):
 
     if left < n and arr[left] > arr[largest]:
         largest = left
-
     if right < n and arr[right] > arr[largest]:
         largest = right
-
     if largest != i:
         arr[i], arr[largest] = arr[largest], arr[i]
         max_heapify(arr, n, largest)
@@ -22,7 +20,5 @@ def max_heap(arr):
 
 
 arr = [12, 11, 13, 21, 27, 10]
-
 max_heap(arr)
-
 print("Max Heap:", arr)
