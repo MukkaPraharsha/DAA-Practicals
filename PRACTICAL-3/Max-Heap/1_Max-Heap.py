@@ -5,8 +5,10 @@ def max_heapify(arr, n, i):
 
     if left < n and arr[left] > arr[largest]:
         largest = left
+
     if right < n and arr[right] > arr[largest]:
         largest = right
+
     if largest != i:
         arr[i], arr[largest] = arr[largest], arr[i]
         max_heapify(arr, n, largest)
@@ -19,6 +21,10 @@ def max_heap(arr):
         max_heapify(arr, n, i)
 
 
-arr = [12, 11, 13, 21, 27, 10]
+n = int(input("Enter number of elements: "))
+
+arr = list(map(int, input("Enter the elements: ").replace(",", " ").split()))
+
 max_heap(arr)
+
 print("Max Heap:", arr)
