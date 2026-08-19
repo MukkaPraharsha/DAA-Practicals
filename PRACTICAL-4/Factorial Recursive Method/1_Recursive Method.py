@@ -8,5 +8,4 @@ def factorial(n):
 n = int(input("Enter a number: "))
 
 result = factorial(n)
-
 print("Factorial of", n, "=", result)
